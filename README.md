@@ -77,8 +77,8 @@ default:
       user: your_username
       password: your_password
       role: ACCOUNTADMIN
-      database: LEAD_DB # Create the database LEAD_DB in snowflake or replace your db nane here
-      warehouse: COMPUTE_WH # Create the warehouse COMPUTE_WH in snowflake or replace your db nane here
+      database: LEAD_DB # Create the database LEAD_DB in snowflake or replace your db name here
+      warehouse: COMPUTE_WH # Create the warehouse COMPUTE_WH in snowflake or replace your warehouse here
       schema: PUBLIC
       threads: 1
       client_session_keep_alive: False
