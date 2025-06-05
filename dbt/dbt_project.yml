@@ -1,0 +1,11 @@
+name: 'lead_to_order'
+version: '1.0'
+config-version: 2
+
+profile: 'lead_to_order'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"

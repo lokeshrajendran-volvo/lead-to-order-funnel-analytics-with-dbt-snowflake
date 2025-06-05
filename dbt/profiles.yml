@@ -1,0 +1,13 @@
+lead_to_order:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <account>
+      user: <username>
+      password: <password>
+      role: ACCOUNTADMIN
+      database: LEAD_DB # create a db LEAD_DB in snowflake or replace your db
+      warehouse: COMPUTE_WH # create a warehouse COMPUTE_WH in snowflake or replace your warehouse
+      schema: PUBLIC
+      threads: 1

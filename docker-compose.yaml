@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  airflow:
+    build: ./airflow
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - DBT_PROFILES_DIR=/opt/airflow/dbt
+      # - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:///airflow.db
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./dbt:/opt/airflow/dbt
+      - ./plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    command: "airflow standalone"
+
+
